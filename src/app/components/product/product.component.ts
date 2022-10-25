@@ -7,5 +7,7 @@ import { IProduct } from 'src/app/models/product';
 })
 
 export class ProductComponent {
-    @Input() products: IProduct
+    @Input() product: IProduct
+    @Input() index: number
+	 detiles = false
 }
