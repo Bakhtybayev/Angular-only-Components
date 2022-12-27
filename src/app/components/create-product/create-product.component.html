@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input
+    type="text"
+    class="border w-full py-2 px-4 mb-2"
+    placeholder="Product name"
+    appFocus
+  />
+
+  <p class="text-red-600 font-medium mb-2" *ngIf="title.errors?.minLength">
+    Please look at this error. Now {{ title.value.length }} -
+    {{ title.errors?.length }}
+  </p>
+
+  <button type="submit" class="py-2 px-4 bg-blue-600 text-white">Create</button>
+</form>
